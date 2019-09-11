@@ -1,0 +1,59 @@
+/**
+* This css file is used to style the welcome page of faculty Management systme
+* I'm going to style each peace of code here one by one clearly and accurately
+* Reemember this file is just used for welcome.blade.php file.
+*/
+* {
+  margin:0px;
+  padding:0px;
+}
+body {
+  background-color: #fff;
+}
+/*styling the slider of this page */
+.carousel-inner{
+  height: 500px;
+  border-radius: 5px;
+  margin: 0px;
+}
+
+/*hide the navbar*/
+#app .navbar {
+  margin:0px;
+  background-color:#3097D1;
+  color: white;
+}
+.navbar-default .navbar-nav > li > a {
+  color: white;
+  font-size: 1.4rem;
+  font-family: verdana;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: dark;
+  font-size: 1.4rem;
+  font-family: verdana;
+  background-color: white;
+  border-radius: 10px;
+}
+/*style the logo */
+.navbar-default .navbar-brand {
+  color: white;
+}
+/* hover effect */
+.navbar-default .navbar-brand:hover{
+  color: dark;
+  background-color: white;
+  border-radius: 10px;
+}
+/*style the Jumbotron*/
+.jumbotron {
+  padding: 0px;
+}
+p {
+  text-indent: justify;
+}
+/*styling the footer*/
+footer p {
+ padding: 20px;
+ background-color: #fff;
+}

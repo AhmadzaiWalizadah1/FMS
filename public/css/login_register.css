@@ -1,0 +1,37 @@
+body {
+  background-color: #fff;
+}
+
+.wow{
+  background: #3097D1;
+  color: white;
+}
+
+#app .navbar {
+  margin:0px;
+  background-color:#3097D1;
+  color: white;
+}
+.navbar-default .navbar-nav > li > a {
+  color: white;
+  font-size: 1.4rem;
+  font-family: verdana;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: dark;
+  font-size: 1.4rem;
+  font-family: verdana;
+  background-color: white;
+  border-radius: 10px;
+}
+
+
+.navbar-default .navbar-brand {
+  color: white;
+}
+/* hover effect */
+.navbar-default .navbar-brand:hover{
+  color: dark;
+  background-color: white;
+  border-radius: 10px;
+}
