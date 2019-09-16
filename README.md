@@ -1,2 +1,2 @@
 # Faculty Management System for Computer Science faculty
-# hi nemgeree armanona 
+# hi nemgeree armanonah
