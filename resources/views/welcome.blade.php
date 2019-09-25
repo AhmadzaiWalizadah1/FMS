@@ -1,12 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-<link rel="stylesheet" href="{{asset('./css/ap.css')}}">
-<!-- row for jumbotron -->\
+<link rel="stylesheet" href="{{asset('./css/app.css')}}">
+<link rel="stylesheet" href="{{asset('./css/slider.css')}}">
+<!-- row for jumbotron -->
  <div class="row">
    <!-- we divide the row into three equal columns -->
    <div class="col-md-3">
-     <p>Ministry logo</p>
+  \    <img src="images/mohe.jpg" alt="Mohe" class="img">
    </div>
    <!-- the second column for header  -->
    <div class="col-md-6">
@@ -14,7 +15,7 @@
    </div>
    <!-- the third colum for CS logo -->
    <div class="col-md-3">
-     <p>CS logo</p>
+         <img src="images/balkh.jpg" alt="balkh" class="img">
    </div>
  </div>
 <!-- Making a Jumbotron here for better style -->
