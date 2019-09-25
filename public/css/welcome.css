@@ -51,6 +51,7 @@ body {
 }
 p {
   text-indent: justify;
+  color: red;
 }
 /*styling the footer*/
 footer p {
