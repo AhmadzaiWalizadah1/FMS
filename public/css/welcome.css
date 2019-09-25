@@ -16,7 +16,9 @@ body {
   border-radius: 5px;
   margin: 0px;
 }
-
+ p{
+   color: red;
+ }
 /*hide the navbar*/
 #app .navbar {
   margin:0px;

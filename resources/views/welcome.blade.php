@@ -1,8 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<link rel="stylesheet" href="{{asset('css/welcome.css')}}">
-
+<link rel="stylesheet" href="{{asset('./css/ap.css')}}">
 <!-- Making a Jumbotron here for better style -->
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
@@ -29,8 +28,7 @@
 
       <!-- the first item-->
       <div class="item active">
-        <img src="images/1.jpg" alt="first pic" class="img img-responsive">
-
+        <img src="images/1.jpg" alt="first picture" class="img">
         <!-- making the captions of slider-->
         <div class="carousel-caption">
           <h2 class="animated bounceInLeft" style="animation-delay: 1s;">We Are Realiable</h2>
@@ -39,7 +37,7 @@
       </div>
       <!-- the second item-->
       <div class="item">
-        <img src="images/2.jpg" alt="first pic" class="img img-responsive">
+        <img src="images/2.jpg" alt="second picture" class="img img-responsive">
         <!-- making the captions of slider-->
         <div class="carousel-caption">
           <h2 class="animated slideInDown" style="animation-delay: 1s;">We Are Realiable</h2>
@@ -48,7 +46,7 @@
       </div>
       <!-- the third item-->
       <div class="item">
-        <img src="images/3.jpg" alt="first pic" class="img img-responsive">
+        <img src="images/3.jpg" alt="third picture" class="img img-responsive">
         <!-- making the captions of slider-->
         <div class="carousel-caption">
           <h2 class="animated zoomIn" style="animation-delay: 1s;" >We Are Realiable</h2>
@@ -59,7 +57,7 @@
 
       <!-- the fourth item-->
       <div class="item">
-        <img src="images/4.jpg" alt="first pic" class="img img-responsive">
+        <img src="images/4.jpg" alt="fourth picture" class="img img-responsive">
         <!-- making the captions of slider-->
         <div class="carousel-caption">
           <h2 class="animated zoomIn" style="animation-delay: 1s;" >We Are Realiable</h2>
@@ -70,7 +68,7 @@
 
       <!-- the fifth item-->
       <div class="item">
-        <img src="images/5.jpg" alt="first pic" class="img img-responsive">
+        <img src="images/5.jpg" alt="fifth picture" class="img img-responsive">
         <!-- making the captions of slider-->
         <div class="carousel-caption">
           <h2 class="animated zoomIn" style="animation-delay: 1s;" >We Are Realiable</h2>
@@ -78,19 +76,6 @@
 
         </div>
       </div>
-
-      <!-- the sixth item-->
-      <div class="item">
-        <img src="images/6.jpg" alt="first pic" class="img img-responsive">
-        <!-- making the captions of slider-->
-        <div class="carousel-caption">
-          <h2 class="animated zoomIn" style="animation-delay: 1s;" >We Are Realiable</h2>
-          <h3 class="animated zoomIn"  style="animation-delay:2s;">IT center of balkh is the best it center</h3>
-
-        </div>
-      </div>
-
-
     </div>
     <!-- making a slide control button at the left-->
     <a href="#myCarousel" class="carousel-control left" data-slide = "prev">
@@ -106,7 +91,7 @@
   <!-- the second row -->
   <div class="row">
     <section>
-      <h1 class="text-center" style="color:red;">About Computer Science faculty</h1>
+      <h1 class="text-center">About Computer Science faculty</h1>
      <p>Video a  provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document.
 To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar. Click Insert and then choose the elements you want from the different galleries.
 Themes and styles also help keep your document coordinated. When you click Design and choose a new Theme, the pictures, charts, and SmartArt graphics change to match your new theme. When you apply styles, your headings change to match the new theme.
