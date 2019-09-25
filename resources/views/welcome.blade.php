@@ -2,13 +2,25 @@
 
 @section('content')
 <link rel="stylesheet" href="{{asset('./css/ap.css')}}">
+<!-- row for jumbotron -->\
+ <div class="row">
+   <!-- we divide the row into three equal columns -->
+   <div class="col-md-3">
+     <p>Ministry logo</p>
+   </div>
+   <!-- the second column for header  -->
+   <div class="col-md-6">
+        <h2> Computer Science Faculty Management System</h2>
+   </div>
+   <!-- the third colum for CS logo -->
+   <div class="col-md-3">
+     <p>CS logo</p>
+   </div>
+ </div>
 <!-- Making a Jumbotron here for better style -->
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h2 class="display-3"><b>C</b>omputer <b>S</b>cience</h2>
-    <p class="lead">Faculty Management System</p>
-  </div>
-</div>
+
+
+
 
 <!-- creating the parallax part-->
 <div class="container-fluid carousel-fluid">
