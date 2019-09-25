@@ -3,6 +3,7 @@
 @section('content')
 <link rel="stylesheet" href="{{asset('./css/app.css')}}">
 <link rel="stylesheet" href="{{asset('./css/slider.css')}}">
+<link rel="stylesheet" href="{{asset('./css/animate.css')}}">
 <!-- row for jumbotron -->
  <div class="row">
    <!-- we divide the row into three equal columns -->
@@ -11,7 +12,7 @@
    </div>
    <!-- the second column for header  -->
    <div class="col-md-6">
-        <h2 class="header"> Computer Science Faculty Management System</h2>
+        <h2 class="header bounceOut"> Computer Science Faculty Management System</h2>
    </div>
    <!-- the third colum for CS logo -->
    <div class="col-md-3">
