@@ -1,3 +1,13 @@
 body {
   background-color: #fff;
 }
+.col-md-3 img {
+  display: inline-block;
+  width: 224px;
+  height: 225px;
+}
+h2.header {
+  margin-top: 20px;
+  color: black;
+  text-shadow: 1px 1px 1px grey;
+}

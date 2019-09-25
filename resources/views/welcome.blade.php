@@ -7,15 +7,15 @@
  <div class="row">
    <!-- we divide the row into three equal columns -->
    <div class="col-md-3">
-  \    <img src="images/mohe.jpg" alt="Mohe" class="img">
+  \    <img src="images/mohe.jpg" alt="Mohe" class="img mohe-logo">
    </div>
    <!-- the second column for header  -->
    <div class="col-md-6">
-        <h2> Computer Science Faculty Management System</h2>
+        <h2 class="header"> Computer Science Faculty Management System</h2>
    </div>
    <!-- the third colum for CS logo -->
    <div class="col-md-3">
-         <img src="images/balkh.jpg" alt="balkh" class="img">
+         <img src="images/balkh.jpg" alt="balkh" class="img balkh-logo">
    </div>
  </div>
 <!-- Making a Jumbotron here for better style -->
