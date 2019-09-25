@@ -8,15 +8,17 @@
  <div class="row">
    <!-- we divide the row into three equal columns -->
    <div class="col-md-3">
-  \    <img src="images/mohe.jpg" alt="Mohe" class="img mohe-logo">
+    <p class="animated bounceInLeft">  <img src="images/mohe.jpg" alt="Mohe" class="img mohe-logo"></p>
    </div>
    <!-- the second column for header  -->
    <div class="col-md-6">
-        <h2 class="header bounceOut"> Computer Science Faculty Management System</h2>
+        <h2 class="header bounceOut" style="animation-delay: 1s;"> Computer Science Faculty Management System</h2>
+        <p class="bounceIn">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+          sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
    </div>
    <!-- the third colum for CS logo -->
    <div class="col-md-3">
-         <img src="images/balkh.jpg" alt="balkh" class="img balkh-logo">
+      <p class="animated bounceInRight" style="animation-delay: 1s;"> <img src="images/balkh.jpg" alt="Mohe" class="img balkh-logo"></p>
    </div>
  </div>
 <!-- Making a Jumbotron here for better style -->
