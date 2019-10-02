@@ -1,15 +1,30 @@
 @extends('layouts.app')
 
 @section('content')
-<link rel="stylesheet" href="{{asset('css/welcome.css')}}">
-
+<link rel="stylesheet" href="{{asset('./css/app.css')}}">
+<link rel="stylesheet" href="{{asset('./css/slider.css')}}">
+<link rel="stylesheet" href="{{asset('./css/animate.css')}}">
+<!-- row for jumbotron -->
+ <div class="row">
+   <!-- we divide the row into three equal columns -->
+   <div class="col-md-3">
+    <p class="animated bounceInLeft">  <img src="images/mohe.jpg" alt="Mohe" class="img mohe-logo"></p>
+   </div>
+   <!-- the second column for header  -->
+   <div class="col-md-6">
+        <h2 class="header bounceOut" style="animation-delay: 1s;"> Computer Science Faculty Management System</h2>
+        <p class="bounceIn">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+          sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+   </div>
+   <!-- the third colum for CS logo -->
+   <div class="col-md-3">
+      <p class="animated bounceInRight" style="animation-delay: 1s;"> <img src="images/balkh.jpg" alt="Mohe" class="img balkh-logo"></p>
+   </div>
+ </div>
 <!-- Making a Jumbotron here for better style -->
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h2 class="display-3"><b>C</b>omputer <b>S</b>cience</h2>
-    <p class="lead">Faculty Management System</p>
-  </div>
-</div>
+
+
+
 
 <!-- creating the parallax part-->
 <div class="container-fluid carousel-fluid">
@@ -29,8 +44,7 @@
 
       <!-- the first item-->
       <div class="item active">
-        <img src="images/1.jpg" alt="first pic" class="img img-responsive">
-
+        <img src="images/1.jpg" alt="first picture" class="img">
         <!-- making the captions of slider-->
         <div class="carousel-caption">
           <h2 class="animated bounceInLeft" style="animation-delay: 1s;">We Are Realiable</h2>
@@ -39,7 +53,7 @@
       </div>
       <!-- the second item-->
       <div class="item">
-        <img src="images/2.jpg" alt="first pic" class="img img-responsive">
+        <img src="images/2.jpg" alt="second picture" class="img img-responsive">
         <!-- making the captions of slider-->
         <div class="carousel-caption">
           <h2 class="animated slideInDown" style="animation-delay: 1s;">We Are Realiable</h2>
@@ -48,7 +62,7 @@
       </div>
       <!-- the third item-->
       <div class="item">
-        <img src="images/3.jpg" alt="first pic" class="img img-responsive">
+        <img src="images/3.jpg" alt="third picture" class="img img-responsive">
         <!-- making the captions of slider-->
         <div class="carousel-caption">
           <h2 class="animated zoomIn" style="animation-delay: 1s;" >We Are Realiable</h2>
@@ -59,7 +73,7 @@
 
       <!-- the fourth item-->
       <div class="item">
-        <img src="images/4.jpg" alt="first pic" class="img img-responsive">
+        <img src="images/4.jpg" alt="fourth picture" class="img img-responsive">
         <!-- making the captions of slider-->
         <div class="carousel-caption">
           <h2 class="animated zoomIn" style="animation-delay: 1s;" >We Are Realiable</h2>
@@ -70,7 +84,7 @@
 
       <!-- the fifth item-->
       <div class="item">
-        <img src="images/5.jpg" alt="first pic" class="img img-responsive">
+        <img src="images/5.jpg" alt="fifth picture" class="img img-responsive">
         <!-- making the captions of slider-->
         <div class="carousel-caption">
           <h2 class="animated zoomIn" style="animation-delay: 1s;" >We Are Realiable</h2>
@@ -78,19 +92,6 @@
 
         </div>
       </div>
-
-      <!-- the sixth item-->
-      <div class="item">
-        <img src="images/6.jpg" alt="first pic" class="img img-responsive">
-        <!-- making the captions of slider-->
-        <div class="carousel-caption">
-          <h2 class="animated zoomIn" style="animation-delay: 1s;" >We Are Realiable</h2>
-          <h3 class="animated zoomIn"  style="animation-delay:2s;">IT center of balkh is the best it center</h3>
-
-        </div>
-      </div>
-
-
     </div>
     <!-- making a slide control button at the left-->
     <a href="#myCarousel" class="carousel-control left" data-slide = "prev">
