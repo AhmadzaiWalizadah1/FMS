@@ -16,9 +16,6 @@
                          <a href="{{route('transcript')}}"><button class="btn btn-info" type="button" class="form-control">برگشت</button></a>
 <!--  					export to excal  -->
                         <button type="submit" class="btn btn-info" type="button" class="form-control"  name="export_transcript">صادر ترانسکرپت به اکسیل</button>
-
-
-
 																							<div class="form-group" style="max-width:150px;">
 
 																								 <select onchange="onclickedOption(this.value)" class="form-control">
