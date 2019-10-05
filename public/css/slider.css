@@ -3,11 +3,16 @@ body {
 }
 .col-md-3 img {
   display: inline-block;
-  width: 224px;
-  height: 225px;
+  width: 170px;
+  height: 170px;
 }
 h2.header {
   margin-top: 20px;
   color: black;
   text-shadow: 1px 1px 1px grey;
+  font-family: verdana;
 }
+/* style slider  */
+/* .carousel-inner {
+  height: 700px;
+} */
