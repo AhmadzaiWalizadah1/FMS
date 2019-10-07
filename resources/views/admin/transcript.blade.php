@@ -5,23 +5,16 @@
 <!--for makeing a perfact view -->
 <div class="container-fluid">
 
-		
+
 			<div  class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12" id="line" >
 				</div>
 			</div>
-          
-           
+
+
            <div  class="row">
-            	<div class="col-xs-2 col-sm-2 col-md-2">
-               	<!-- return button in head of page -->
-                	<div>
-                   	 <br>
-                    	<a href="http://localhost/laravel-admin-master/public/admin"><button class="btn btn-info" type="button" class="form-control">برگشت</button></a>
-                	</div>
-            	</div>      
-				<!--/ make a return button in head of page -->
-           
+
+
 				<!--header name-->
             	<div class="col-xs-10 col-sm-10 col-md-10">
                 	<div id="page-title" class="row subheader hline">
@@ -33,7 +26,7 @@
 			</div>
 
 	<div class="col-xs-12 col-sm-10 col-md-12">
-			
+
 			<!-- all about language type -->
 			<div class="row">
 				<br>
@@ -41,13 +34,25 @@
 					<!--A form to represent in which launguage do you want to represent trascript -->
 				    <form class="form-inline">
                             <div class="form-group" style="max-width:150px;">
-                               <select class="form-control">
-                                   <option value="0">از اینجا انتخاب کنید</option>
-                                   <option value="1">دری</option>
-                                  <option value="2">انگلیسی</option>
+
+                               <select onchange="onclickedOption(this.value)" class="form-control">
+                                   <option disabled selected>از اینجا انتخاب کنید</option>
+																	 <option value="1" >دری</option>
+
+                                  <option value="2" >انگلیسی</option>
                                 </select>
                             </div>
+														<script>
+															function onclickedOption(src){
+																if (src==1)
+																	window.location="{{route('transcript_dari')}}";
+																else {
+																	window.location="{{route('transcript_english')}}";
+																}
+															}
+														</script>
                          <label>: ارائه ترانسکرپت به زبان</label>
+
                     </form>
 					<!--/A form to represent in which launguage do you want to represent trascript-->
                     <br>
@@ -68,7 +73,7 @@
 			<!-- all about pre studant detils  -->
 				<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-4">
-                        
+
 <!--                           table of student more info-->
                             <table class="table table-bordered" style="background-color: white;">
                                 <tr>
@@ -103,13 +108,13 @@
 
 						<h3 class="text-center"> جمهوری اسلامی افغانستان </h3>
 						<h4 class="text-center"> وزارت تحصیلات عالی </h4>
-					
+
 						<h4 class="text-center">پوهنتون بلخ</h4>
 						<h4 class="text-center">&nbsp; &nbsp;معاونیت امور محصلان</h4>
 						<h4 class="text-center " style="text-align: center; padding-left: 13.1%;">پوهنحی کمپیوتر ساینس</h4>
 						<h3 class="text-center" style="text-align: center; padding-left: 10%">&nbsp;&nbsp;ترانسکرپت نمرات محصلان</h3>
 					</div>
-					
+
 <!--						/university name, and it info in center of page-->
 
 <!-- 							student  info -->
@@ -159,7 +164,7 @@
 <!--                 		table of student semester details -->
 						<table class="table table-bordered" style="background-color: white;">
 <!--							column of semester year -->
-							<tr> 
+							<tr>
 								<td colspan="5" class='text-center'>(1392) : سمستر چهارم سال</td>
 								<td colspan="5" class='text-center'>(1392) : سمستر سوم سال  </td>
 								<td colspan="5" class='text-center'>(1392) : سمستر دوم سال</td>

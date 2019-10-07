@@ -52,6 +52,12 @@ class HomeController extends Controller
     public function transcript(){
       return view('admin.transcript');
     }
+    public function transcript_dari(){
+      return view('admin.transcript_dari');
+    }
+    public function transcript_english(){
+      return view('admin.transcript_english');
+    }
     public function attendance(){
       return view('admin.attendance');
     }

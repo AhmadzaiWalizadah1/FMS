@@ -33,6 +33,8 @@ Route::group([ 'middleware' => 'auth' ], function() {
       Route::get('/admin/sawaneh', 'HomeController@sawaneh')->name('sawaneh');
         Route::get('/admin/sawanehForm', 'HomeController@sawanehForm')->name('sawanehForm');
       Route::get('/admin/exam_result', 'HomeController@exam_result')->name('exam_result');
+      Route::get('/admin/transcript_dari', 'HomeController@transcript_dari')->name('transcript_dari');
+      Route::get('/admin/transcript_english', 'HomeController@transcript_english')->name('transcript_english');
 
       //post method
         Route::post('/admin/kankorForm', 'Kankor_ResultController@store')->name('store_kankor_form');

@@ -50,7 +50,7 @@
    <!-- the fourth column -->
    <div class="col-md-3">
      <div class="thumbnail  border_radius">
-       <a href="#">
+       <a href="{{route('staff')}}">
          <!-- the fourth image -->
          <img src="{{asset('images/icon/staff.png')}}" alt="Lights" style="width:50%">
 
@@ -65,7 +65,7 @@
   <div class="row">
   <div class="col-md-3">
    <div class="thumbnail  border_radius ">
-     <a href="#">
+     <a href="{{route('attendance')}}">
        <!-- the first image -->
        <img src="{{asset('images/icon/hazery.png')}}" alt="Lights" style="width:50%">
 
@@ -112,20 +112,7 @@
   </div>
   </div>
   <br>
-  <!-- the fifth column -->
-  <div class="row">
-  <div class="col-md-3">
-   <div class="thumbnail  border_radius">
-     <a href="#">
-       <!-- the fifth image -->
-       <img src="{{asset('images/icon/hazery.png')}}" alt="Lights" style="width:50%">
-
-     </a>
-   </div>
-   <!-- end of the image container -->
-  </div>
-  <!-- end of the row -->
-  </div>
+  
   </div>
   <!-- end of the overall container. -->
 
