@@ -1,5 +1,17 @@
 /* style the contents */
 .overall-container {
-  background-color: lightgrey;
-  margin 0px 40px 0 40px;;
+  background-color: rgba(240, 237, 237);
+  margin: 0px auto;;
+}
+p {
+  color: black;
+  font-size: 1.8rem;
+  line-height: normal;;
+  word-spacing: 1px;
+
+}
+h1, h2, h3, h4,h5 {
+  color: black;
+  font-size: 3rem;;
+  text-shadow: 1px 0.23px; .5px grey;
 }
