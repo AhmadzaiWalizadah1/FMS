@@ -61,7 +61,4 @@ class HomeController extends Controller
     public function attendance(){
       return view('admin.attendance');
     }
-    public function staff(){
-      return view('admin.staff');
-    }
 }

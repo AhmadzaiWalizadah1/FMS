@@ -11,7 +11,7 @@
 
     <!-- Creating new staff -->
     <div class="col-sm-4 col-xs-4">
-      <form  action="" method="post">
+      <form  action="#" method="post">
         <a class="btn btn-primary"  data-toggle="modal" data-target="#new-staf"> ایجاد کارمند جدید</a>
       </div>
       <!-- end of the process -->
