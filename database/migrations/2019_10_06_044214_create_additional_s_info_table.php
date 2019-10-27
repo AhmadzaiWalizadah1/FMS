@@ -33,8 +33,6 @@ class CreateAdditionalSInfoTable extends Migration {
 			$table->string('E_Thesis_title', 200)->nullable();
 		});
 	}
-
-
 	/**
 	 * Reverse the migrations.
 	 *
