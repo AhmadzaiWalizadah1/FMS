@@ -28,6 +28,9 @@ Route::group([ 'middleware' => 'auth' ], function() {
   // change the staff controller
   Route::get('/admin/staff', 'staffController@index')->name('staff');
   Route::post('/admin/staff','staffController@store')->name('staff');
+  // sawaneh controller
+  Route::post('/admin/staff','Sawaneh_ResultController@store')->name('sawanih_result');
+
 
   // LIVE SEARCH ROUTES
 Route::get('/live_search', 'LiveSearch@index');
