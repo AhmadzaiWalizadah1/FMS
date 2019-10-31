@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 
-use App\Kankor_Result;
+use App\models\KankorList;
+
+
 
 class Kankor_ResultController extends Controller
 {
@@ -15,13 +17,20 @@ class Kankor_ResultController extends Controller
      */
     public function index()
     {
-      return view('admin.kankor');
+      $students =  KankorList::all();
+
+
+
+      return view('admin.kankor')->with('students', $students);
 
     }
+
 // search students
 public function student_search() {
+    $value = Input::get('search');
+    $students = KankorList::where('k_id', 'LIKE', '%' . $value . '%')->limit(25)->get();
 
-    return view('admin.kankor');
+    return view('admin.kankor') ->with('students', $students);
 }
 
     /**
@@ -31,7 +40,7 @@ public function student_search() {
      */
     public function create()
     {
-
+        //
     }
 
     /**
@@ -42,6 +51,25 @@ public function student_search() {
      */
     public function store(Request $request)
     {
+
+
+
+      $kankor_result = KankorList::create([
+          'k_id' => $request->k_id,
+          'name'    => $request->name,
+          'f_name' => $request->f_name,
+          'gf_name'       => $request->gf_name,
+          'last_name'   => $request->last_name,
+          'school'    => $request->school,
+          'e_school'  =>  $request->e_school ,
+          'g_year'  =>  $request->g_year,
+          'k_exam_year'  =>  $request->k_exam_year ,
+          'kankor_score'  =>  $request->kankor_score ,
+          'faculty'  =>  $request->faculty ,
+          'province'  =>  $request->province  ,
+          'gender'  =>  $request->gender ,
+      ]);
+
 
 
       return redirect()->route('kankorForm') ;
@@ -55,6 +83,8 @@ public function student_search() {
      */
     public function show($id)
     {
+
+
 
     }
 
@@ -89,6 +119,6 @@ public function student_search() {
      */
     public function destroy($id)
     {
-
+        //
     }
 }
