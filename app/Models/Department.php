@@ -32,8 +32,7 @@ class Department extends Eloquent
 	];
 
 	protected $fillable = [
-		'Title',
-		'E_title'
+		
 	];
 
 	public function courses()

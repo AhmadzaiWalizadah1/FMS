@@ -23,7 +23,7 @@
       <!-- MAKE THE SEARCH BOX -->
       <div class="row " >
         <div class="dleft">
-          <form  action="{{route('staff_search')}}" method="GET">
+          <form  action="" method="GET">
             {{ csrf_field() }}
             <button type="submit" name="button" class="btn btn-primary">جستجو</button>
           </div>
@@ -124,7 +124,7 @@
 
 <!-- Modal start from here.... -->
 <!-- Modal button  -->
-<form  action="{{action('staffController@store')}}" method="post">
+<form  action="{{route('staff_post')}}" method="post">
   <!-- adding csrf token -->
   {{ csrf_field() }}
 
@@ -234,7 +234,7 @@
    function fetch_customer_data(query = '')
    {
     $.ajax({
-     url:"{{ route('live_search.action') }}",
+     url:"",
      method:'GET',
      data:{query:query},
      dataType:'json',
@@ -247,27 +247,9 @@
   }
   $(document).on('keyup', '#search', function(){
     var query = $(this).val();
-    fetch_customer_data(query);
-  });
-});
-</script>
+
 
 <!-- END OF THE JQUERY CODE -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -120,8 +120,6 @@
 
     </div>
     <!-- End of the Modal  -->
-
-
     <div class="col-md-2 col-md-offset-6"  style= " margin-top:3%;">
       <button type="button" class="btn btn-primary  btn-block " data-toggle="modal" data-target="#new-course">اضافه نمودن مضمون</button>
       <!-- subjects Modal -->
@@ -137,7 +135,7 @@
             <div class="modal-body text-right">
 
               <!-- The form for Subjects that collect info -->
-              <form action="{{url('admin/subject')}}" method="POST" >
+              <form action="{{route('course_subject')}}" method="POST" >
                 {{ csrf_field() }}
 
                   <tr>
@@ -218,6 +216,17 @@
                     <option value="6">سمستر ششم</option>
                     <option value="7">سمستر هفتم</option>
                     <option value="8">سمستر هشتم</option>
+                  </select>
+                </td>
+              </tr>
+
+               <tr>
+                <td>
+                  <select class="form-control" name="year" dir="rtl">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
                   </select>
                 </td>
               </tr>

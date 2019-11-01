@@ -29,14 +29,17 @@ class Course_DepController extends Controller
       $course->E_title = request('E_title');
       $course->Credits = request('Credits');
       $course->Semester = request('Semester');
-      $course->D_ID = request('D_ID');
+      $course->C_ID = request('C_ID');
+      $course->year = request('year');
       $course->save();
       return redirect('admin/subject');
     }
     // department 
     public function departmentDetials(Request $request){
+        // dd($request);
         $department = new Department;
-        $department->Title = request('dTtitle');
+        $department ->D_ID = request('D_ID');
+        $department->Title = request('dTitle');
         $department ->E_title = request('dE_title');
         $department ->save();
         return redirect('admin/subject');

@@ -8,9 +8,7 @@
 
 
   <form action="{{route('store_kankor_form')}}" method="POST">
-<!--<<<<<<< HEAD
 
-  {{ csrf_field() }}-->
 
     <div class="col-xs-6 col-sm-6 col-md-4" style="text-align: right;float: right;">
 

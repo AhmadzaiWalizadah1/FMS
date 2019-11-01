@@ -30,23 +30,9 @@ class Staff extends Eloquent
 	protected $casts = [
 		'Staff_ID' => 'int'
 	];
-
-	protected $fillable = [
-		'Name',
-		'E_Name',
-		'Last_name',
-		'E_last_name',
-		'F_Name',
-		'Degree',
-		'E_degree',
-		'Position',
-		'E_position',
-		'Contact'
-	];
-
 	public function courses()
 	{
 		return $this->belongsToMany(\App\Models\Course::class, 'staff_course_rel', 'Staff_ID', 'C_ID')
-					->withPivot('year');
+			->withPivot('year');
 	}
 }
