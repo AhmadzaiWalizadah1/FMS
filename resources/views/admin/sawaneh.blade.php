@@ -46,10 +46,13 @@
       </thead>
       <tbody>
         <!-- Table body Started from here. -->
-         @foreach $students as student
-          <td>{{$student ->last_name}}</td>
+        @foreach($students as student)
+          <td>{{$student ->name}}</td>
 
-          @endforeach
+
+
+
+        @endforeach
       </tbody>
     </table>
     <!-- end of the table div -->
