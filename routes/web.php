@@ -27,6 +27,41 @@ Route::group([ 'middleware' => 'auth' ], function() {
 
   // change the staff controller
   Route::get('/admin/staff', 'staffController@index')->name('staff');
+  Route::post('/admin/staff','staffController@store')->name('staff');
+
+  // LIVE SEARCH ROUTES
+Route::get('/live_search', 'LiveSearch@index');
+Route::get('/live_search/action', 'LiveSearch@action')->name('live_search.action');
+
+// other functionality
+Route::any('/search',function(){
+  $q = Input::get ( 'q' );
+  $user = Staff::where('Staff_ID','LIKE','%'.$q.'%')->orWhere('Name','LIKE','%'.$q.'%')->get();
+  if(count($user) > 0)
+  return view('admin.staff')->withDetails($user)->withQuery ( $q );
+  else return view ('admin.staff')->withMessage('No Details found. Try to search again !');
+});
+
+Route::get ( '/', function () {
+  return view ( 'welcome' );
+});
+
+Route::any ( '/search', function () {
+  $q = Input::get ( 'q' );
+  $user =Staff::where ( 'Staff_ID', 'LIKE', '%' . $q . '%' )
+  ->orWhere ( 'Name', 'LIKE', '%' . $q . '%' )
+  ->orWhere ( 'F_Name', 'LIKE', '%' . $q . '%' )
+  ->orWhere ( 'Last_name', 'LIKE', '%' . $q . '%' )
+  ->orWhere ( 'Position', 'LIKE', '%' . $q . '%' )
+  ->orWhere ( 'Degree', 'LIKE', '%' . $q . '%' )
+  ->orWhere ( 'Contact', 'LIKE', '%' . $q . '%' )->get ();
+  if (count ( $user ) > 0)
+  return view ( 'welcome' )->withDetails ( $user )->withQuery ( $q );
+  else
+  return view ( 'welcome' )->withMessage ( 'No Details found. Try to search again !' );
+} );
+// end of the OTHER search
+
 
   Route::get('/admin/transcript', 'HomeController@transcript')->name('transcript');
   Route::get('/admin/kankor', 'Kankor_ResultController@index')->name('kankor');

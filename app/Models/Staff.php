@@ -11,7 +11,7 @@ use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
  * Class Staff
- * 
+ *
  * @property int $Staff_ID
  * @property string $Name
  * @property string $E_Name
@@ -23,7 +23,7 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property string $Position
  * @property string $E_position
  * @property string $Contact
- * 
+ *
  * @property \Illuminate\Database\Eloquent\Collection $courses
  *
  * @package App\Models
