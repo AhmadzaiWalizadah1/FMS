@@ -11,7 +11,7 @@ use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
  * Class KankorList
- * 
+ *
  * @property string $k_id
  * @property string $name
  * @property string $f_name
@@ -27,7 +27,7 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property string $gender
  * @property \Carbon\Carbon $updated_at
  * @property \Carbon\Carbon $created_at
- * 
+ *
  * @property \Illuminate\Database\Eloquent\Collection $student_infos
  *
  * @package App\Models
@@ -45,6 +45,7 @@ class KankorList extends Eloquent
 	];
 
 	protected $fillable = [
+		'k_id',
 		'name',
 		'f_name',
 		'gf_name',

@@ -46,23 +46,10 @@
       </thead>
       <tbody>
         <!-- Table body Started from here. -->
-        <!-- The first row -->
-        <tr>
-          <td></td>
-          <td>مصمم</td>
-          <td>محمد محسن</td>
-          <td>رویین</td>
-          <td>H1903454</td>
-        </tr>
-        <!-- the Second row -->
-        <tr>
-          <td></td>
-          <td>محمدی</td>
-          <td>عبدالرازق</td>
-          <td>حشمت الله</td>
-          <td>H190120</td>
-        </tr>
-        <!-- end of the second row -->
+         @foreach $students as student
+          <td>{{$student ->last_name}}</td>
+
+          @endforeach
       </tbody>
     </table>
     <!-- end of the table div -->

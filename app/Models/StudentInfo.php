@@ -11,7 +11,7 @@ use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
  * Class StudentInfo
- * 
+ *
  * @property string $K_ID
  * @property string $S_ID
  * @property string $E_name
@@ -49,7 +49,7 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property string $b_work
  * @property string $b_work_location
  * @property int $Semester
- * 
+ *
  * @property \App\Models\KankorList $kankor_list
  * @property \App\Models\Department $department
  * @property \App\Models\AdditionalSInfo $additional_s_info
