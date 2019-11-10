@@ -18,9 +18,7 @@ class Sawaneh_ResultController extends Controller
     public function index()
     {
       $students =  StudentInfo::all();
-        return view('admin.sawaneh',compact("students"))
-
-      //
+      return view('admin.sawaneh', compact('students'));
       // return view('admin.sawaneh',compact($students));
 
     }

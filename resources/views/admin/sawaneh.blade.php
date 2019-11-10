@@ -46,13 +46,21 @@
       </thead>
       <tbody>
         <!-- Table body Started from here. -->
-        @foreach($students as student)
-          <td>{{$student ->name}}</td>
+        @if(isset($students))
 
-
-
-
+        @foreach ($students as $std)
+          <td>{{$std -> K_ID}}</td>
+          <td>{{$std -> E_name}}</td>
+          <td>{{$std ->E_f_name}}</td>
+          <td>{{$std ->E_faculty}}</td>
+          <td>{{$std ->$E_f_name}}</td>
         @endforeach
+
+       @endif
+
+
+
+
       </tbody>
     </table>
     <!-- end of the table div -->
