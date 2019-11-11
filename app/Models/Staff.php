@@ -1,14 +1,6 @@
- <?php
-
-/**
- * Created by Reliese Model.
- * Date: Tue, 08 Oct 2019 06:20:46 +0000.
- */
-
-namespace App\Models;
-
+<?php
+ namespace App\Models;
 use Reliese\Database\Eloquent\Model as Eloquent;
-
 /**
  * Class Staff
  *

@@ -1,10 +1,8 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
-Use \App\Models\Staff;
+use App\Models\Staff;
 use DB;
 class staffController extends Controller
 {
@@ -20,8 +18,9 @@ class staffController extends Controller
         //
     }
     // STORE METHOD
-    public function store(Request $request)
-    {
+    public function store(Request $request){
+
+
       // getting the data from the form and store it into database
       $staff = new Staff;
       $staff->Staff_ID = request('Staff_ID');
@@ -39,6 +38,7 @@ class staffController extends Controller
       $staff->save();
        return redirect('admin/staff');
     }
+
 //    SHOW METHOD
     public function show($id)
     {
@@ -46,7 +46,7 @@ class staffController extends Controller
     }
     // ACTION EMTHOD FOR AJAX SEARCH
     public function action(){
-        
+
 
 
     }
@@ -68,3 +68,4 @@ class staffController extends Controller
         //
     }
 }
+?>
