@@ -64,6 +64,19 @@ Route::post('/admin.staff',"StaffController@store")->name('staff');
   } );
   // end of the OTHER search
 
+//  EXAM_RESULT PAGE ROUTES
+// Route::post('/admin/exam_result','examResultController@store');
+Route::get('admin.exam_result',function(){
+  return view('admin.exam_result');
+});
+
+
+
+
+
+
+
+
 
   Route::get('/admin/transcript', 'HomeController@transcript')->name('transcript');
   Route::get('/admin/kankor', 'Kankor_ResultController@index')->name('kankor');

@@ -28,8 +28,11 @@
 <!-- Modal -->
 
 <!-- form -->
-<form class="" action="index.html" method="post">
+<form class="" action="{{URL::to('/admin/exam_result')}}" method="post">
+  <!-- csrf token -->
+    {{ csrf_field() }}
 
+    <input type="hidden" name="_token" value="{{ csrf_token() }}">
   <!-- Modal button  -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <!-- the Modal div that contain all content of the Modal -->

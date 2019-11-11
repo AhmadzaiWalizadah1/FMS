@@ -11,7 +11,7 @@ use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
  * Class ExamResult
- * 
+ *
  * @property string $S_ID
  * @property string $C_ID
  * @property int $Year
@@ -21,7 +21,7 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property float $Midterm
  * @property float $Final
  * @property string $comment
- * 
+ *
  * @property \App\Models\StudentInfo $student_info
  * @property \App\Models\Course $course
  *
