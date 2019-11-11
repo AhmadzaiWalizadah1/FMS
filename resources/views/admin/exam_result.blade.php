@@ -58,6 +58,11 @@
         </div>
 
         <div dir="rtl">
+          <label for="name">نام مضمون</label>
+          <input type="text" id="name" value="" class="form-control" placeholder="آی دی محصل را وارد کنید">
+        </div>
+
+        <div dir="rtl">
           <label for="subjectname">سال</label>
           <input type="text" id="subjectname" value="" class="form-control" placeholder="سال را وارد کنید">
         </div>
