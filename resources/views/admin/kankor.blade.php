@@ -27,16 +27,8 @@
   </div>
 
 </div>
-
   <!-- Create a form to input data-->
-
-<br>
-
-
-
-
-
-
+<!--  END OF THE SEARCH FIELD -->
 
 </div>
 

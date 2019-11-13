@@ -79,6 +79,9 @@ Route::any ( '/search', function () {
 
   // search students
   Route::get('/admin/kankor/search', 'Kankor_ResultController@student_search')->name('student_search');
+  // staff search
+  Route::get('/admin/staff/search', 'staffController@staff_search')->name('staff_search');
+
 
 
 

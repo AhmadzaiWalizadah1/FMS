@@ -21,17 +21,19 @@
       <!-- end of the process -->
 
       <!-- MAKE THE SEARCH BOX -->
-      <form action="/search" method="POST" role="search">
-        {{ csrf_field() }}
-        <div class="input-group">
-            <input type="text" class="form-control" name="q"
-                placeholder="Search users"> <span class="input-group-btn">
-                <button type="submit" class="btn btn-default">
-                    <span class="glyphicon glyphicon-search"></span>
-                </button>
-            </span>
+      <div class="row " >
+        <div class="dleft">
+          <form  action="{{route('staff_search')}}" method="POST">
+          {{ csrf_field() }}
+            <button type="submit" name="button" class="btn btn-primary">جستجو</button>
+          </div>
+          <div class="col-md-4 dleft" >
+
+            <input type="text" name="search" placeholder="  را وارد نماید ID " class="form-control" style="text-align:right">
+
+          </form>
         </div>
-    </form>
+      </div>
       <!--END OF THE SEARCH BOX  -->
 
   <!-- SEARCH RESULT  -->

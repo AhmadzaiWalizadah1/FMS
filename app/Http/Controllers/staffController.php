@@ -13,6 +13,7 @@ class staffController extends Controller
     {
         $staff = Staff:: all();
         return view('admin.staff')->with('staff', $staff);
+
     }
   // CREATE METHOD
     public function create()
@@ -39,6 +40,14 @@ class staffController extends Controller
       $staff->save();
        return redirect('admin/staff');
     }
+  // adding search method
+  public function staff_search() {
+      $value = Input::get('search');      
+      $staff = Staff::where('Staff_ID', 'LIKE', '%' . $value . '%')->limit(25)->get();
+      return view('admin.staff')->with('staff', $staff);
+  }
+
+
 //    SHOW METHOD
     public function show($id)
     {
@@ -46,7 +55,7 @@ class staffController extends Controller
     }
     // ACTION EMTHOD FOR AJAX SEARCH
     public function action(){
-        
+
 
 
     }
