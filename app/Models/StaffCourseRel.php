@@ -1,21 +1,16 @@
 <?php
-
-/**
- * Created by Reliese Model.
- * Date: Tue, 08 Oct 2019 06:21:04 +0000.
- */
-
+	 // using namespace model 
 namespace App\Models;
 
 use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
  * Class StaffCourseRel
- * 
+ *
  * @property string $C_ID
  * @property int $Staff_ID
  * @property int $year
- * 
+ *
  * @property \App\Models\Course $course
  * @property \App\Models\Staff $staff
  *
