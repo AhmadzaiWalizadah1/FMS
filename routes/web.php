@@ -1,15 +1,4 @@
 <?php
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 // route the welcome page
 Route::get('/', function () {
   return view('welcome');
@@ -25,18 +14,14 @@ Route::group([ 'middleware' => 'auth' ], function() {
   // MAIN DASHBOARD
 Route::get('/admin/attendance', 'HomeController@attendance')->name('attendance');
 
-  // change the staff controller
-// Route::get('/admin/staff', 'StaffController@index')->name('staff');
-// Route::post('/admin/staff',[
-//   'uses' => 'StaffController@store'
-// ]);
-Route::resource('/admin/staff', 'StaffController');
-Route::get('/admin.staff','StaffController@store')->name('staff');
-Route::post('/admin.staff',"StaffController@store")->name('staff');
+// change the staff controller
+Route::get('/admin/staff', 'StaffController@index')->name('staff');
+Route::get('/admin/staff','StaffController@store')->name('staff');
+Route::get('/admin/staff','StaffController@well')->name('staff');
 
 
   // other functionality
-  Route::any('/search',function(){
+Route::any('/search',function(){
     $q = Input::get ( 'q' );
     $user = Staff::where('Staff_ID','LIKE','%'.$q.'%')->orWhere('Name','LIKE','%'.$q.'%')->get();
     if(count($user) > 0)
@@ -65,10 +50,7 @@ Route::post('/admin.staff',"StaffController@store")->name('staff');
   // end of the OTHER search
 
 //  EXAM_RESULT PAGE ROUTES
-// Route::post('/admin/exam_result','examResultController@store');
-Route::get('admin.exam_result',function(){
-  return view('admin.exam_result');
-});
+// Route::resource('/admin.exam_result','')
 
 
 

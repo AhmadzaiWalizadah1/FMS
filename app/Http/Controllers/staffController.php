@@ -7,10 +7,13 @@ use DB;
 class staffController extends Controller
 {
   // INDEX METHOD
-    public function index()
-    {
-        $staff = Staff:: all();
-        return view('admin.staff')->with('staff', $staff);
+    public function index(){
+      return view('admin.staff');
+    }
+    public function well(){
+      $staff = Staff::all();
+      return view('admin.staff')->with('staff',$staff);
+
     }
   // CREATE METHOD
     public function create()
@@ -18,8 +21,8 @@ class staffController extends Controller
         //
     }
     // STORE METHOD
-    public function store(Request $request){
-
+    public function store(Request $request)
+    {
 
       // getting the data from the form and store it into database
       $staff = new Staff;
@@ -34,11 +37,11 @@ class staffController extends Controller
       $staff->Position = request('Position');
       $staff->E_position = request('E_position');
       $staff->Contact = request('Contact');
-//     save the data
-      $staff->save();
-       return redirect('admin/staff');
+          dd($request->all());
+        // save the data
+      // $staff->save();
+      // return redirect('admin/staff');
     }
-
 //    SHOW METHOD
     public function show($id)
     {
@@ -65,7 +68,7 @@ class staffController extends Controller
 //  DESTROY METHOD
     public function destroy($id)
     {
-        //
+
     }
-}
+  }
 ?>
