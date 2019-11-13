@@ -7,12 +7,19 @@ use DB;
 class staffController extends Controller
 {
   // INDEX METHOD
+<<<<<<< HEAD
     public function index(){
       return view('admin.staff');
     }
     public function well(){
       $staff = Staff::all();
       return view('admin.staff')->with('staff',$staff);
+=======
+    public function index()
+    {
+        $staff = Staff:: all();
+        return view('admin.staff')->with('staff', $staff);
+>>>>>>> staff-branch
 
     }
   // CREATE METHOD
