@@ -6,20 +6,18 @@ use App\Models\Staff;
 use DB;
 class staffController extends Controller
 {
-  // INDEX METHOD
-<<<<<<< HEAD
-    public function index(){
-      return view('admin.staff');
-    }
+  // // INDEX METHOD
+  //   public function index(){
+  //     return view('admin.staff');
+  //   }
     public function well(){
       $staff = Staff::all();
       return view('admin.staff')->with('staff',$staff);
-=======
+    }
     public function index()
     {
         $staff = Staff:: all();
         return view('admin.staff')->with('staff', $staff);
->>>>>>> staff-branch
 
     }
   // CREATE METHOD
@@ -44,14 +42,12 @@ class staffController extends Controller
       $staff->Position = request('Position');
       $staff->E_position = request('E_position');
       $staff->Contact = request('Contact');
-          dd($request->all());
-        // save the data
-      // $staff->save();
-      // return redirect('admin/staff');
+      $staff->save();
+      return redirect('admin/staff');
     }
   // adding search method
   public function staff_search() {
-      $value = Input::get('search');      
+      $value = Input::get('search');
       $staff = Staff::where('Staff_ID', 'LIKE', '%' . $value . '%')->limit(25)->get();
       return view('admin.staff')->with('staff', $staff);
   }
