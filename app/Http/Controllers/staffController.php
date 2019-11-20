@@ -6,10 +6,6 @@ use App\Models\Staff;
 use DB;
 class staffController extends Controller
 {
-  // // INDEX METHOD
-  //   public function index(){
-  //     return view('admin.staff');
-  //   }
     public function well(){
       $staff = Staff::all();
       return view('admin.staff')->with('staff',$staff);
@@ -48,8 +44,9 @@ class staffController extends Controller
   // adding search method
   public function staff_search() {
       $value = Input::get('search');
-      $staff = Staff::where('Staff_ID', 'LIKE', '%' . $value . '%')->limit(25)->get();
-      return view('admin.staff')->with('staff', $staff);
+      dd($value);
+      // $staff = Staff::where('Staff_ID', 'LIKE', '%' . $value . '%')->limit(25)->get();
+      // return view('admin.staff')->with('staff', $staff);
   }
 
 
