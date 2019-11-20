@@ -42,12 +42,11 @@ class staffController extends Controller
     }
   // adding search method
   public function staff_search() {
-      $value = Input::get('search');      
-      $staff = Staff::where('Staff_ID', 'LIKE', '%' . $value . '%')->limit(25)->get();
-      return view('admin.staff')->with('staff', $staff);
+    $value = Input::get('search');
+    $staff = Staff::where('Staff_ID', 'LIKE', '%' . $value . '%')->limit(25)->get();
+
+    return view('admin.staff') ->with('staffs', $staff);
   }
-
-
 //    SHOW METHOD
     public function show($id)
     {
@@ -59,7 +58,6 @@ class staffController extends Controller
 
 
     }
-
 //  EDIT METHOD
     public function edit($id)
     {
