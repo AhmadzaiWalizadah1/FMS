@@ -23,13 +23,13 @@
       <!-- MAKE THE SEARCH BOX -->
       <div class="row " >
         <div class="dleft">
-          <form  action="{{route('staff_search')}}" method="POST">
+          <form  action="{{route('staff_search')}}" method="GET">
           {{ csrf_field() }}
             <button type="submit" name="button" class="btn btn-primary">جستجو</button>
           </div>
           <div class="col-md-4 dleft" >
 
-            <input type="text" name="search" placeholder="  را وارد نماید ID " class="form-control" style="text-align:right">
+            <input type="search" name="search" placeholder="  را وارد نماید ID " class="form-control" style="text-align:right">
 
           </form>
         </div>
@@ -71,6 +71,10 @@
     @endif
 </div>
 <!-- END OF THE SEARCH RESULT -->
+<<<<<<< HEAD
+=======
+    </form>
+>>>>>>> staff-branch
   </div>
   <!--end of the first row-->
   <br>
