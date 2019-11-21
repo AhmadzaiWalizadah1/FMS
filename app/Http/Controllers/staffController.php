@@ -43,18 +43,8 @@ class staffController extends Controller
     }
   // adding search method
   public function staff_search() {
-<<<<<<< HEAD
-      $value = Input::get('search');
-      dd($value);
-      // $staff = Staff::where('Staff_ID', 'LIKE', '%' . $value . '%')->limit(25)->get();
-      // return view('admin.staff')->with('staff', $staff);
-  }
-
-=======
     $value = Input::get('search');
     $staff = Staff::where('Staff_ID', 'LIKE', '%' . $value . '%')->limit(25)->get();
->>>>>>> staff-branch
-
     return view('admin.staff') ->with('staffs', $staff);
   }
 //    SHOW METHOD
