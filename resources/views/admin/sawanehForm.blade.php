@@ -10,7 +10,7 @@
 <br>
 
   <!-- The form for collecting information -->
-<form action="" method="POST">
+<form action="{{route('sawanih_result')}}" method="POST">
   <div class="col-xs-6 col-sm-6 col-md-4" style="text-align: right;float: right;">
 
     <!-- Kandor id input field -->
@@ -189,8 +189,8 @@
     </div>
     <!-- The footer of Modal -->
     <div class="modal-footer">
-     <a href="{{route('sawaneh')}}" class="btn btn-primary">بازگشت</a>
-     <a href="#" class="btn btn-primary">ذخیره</a>
+     <a href="{{route('sawanih_result')}}" class="btn btn-primary">بازگشت</a>
+     <input type="submit" name="" value="Save">
   </div>
   </div>
 
