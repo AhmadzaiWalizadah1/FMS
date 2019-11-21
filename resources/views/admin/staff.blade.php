@@ -71,10 +71,7 @@
     @endif
 </div>
 <!-- END OF THE SEARCH RESULT -->
-<<<<<<< HEAD
-=======
     </form>
->>>>>>> staff-branch
   </div>
   <!--end of the first row-->
   <br>
