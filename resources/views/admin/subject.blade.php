@@ -10,6 +10,7 @@
      <!-- The first row that cotain the contents of the page -->
   <div class="row">
 
+
     <div class="col-md-12">
       <div class="row">
         <!-- The cards for departments that show the details of departments -->
@@ -47,8 +48,9 @@
                 </div>
                 <div class="modal-body">
                   <!-- The form for deptartment contents -->
-                  <form action="" method="post" >
-
+                  <form action="{{url('admin/subject')}}" method="POST">
+                        <!-- adding CSRF token -->
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
                       <tr>
                         <td>
                           <label for="exampleInputEmail1">آی دی دیپارتمنت</label>

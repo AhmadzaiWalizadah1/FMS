@@ -31,6 +31,7 @@ Route::group([ 'middleware' => 'auth' ], function() {
 // Route::get('/admin/subject','course_DepController@course_Details')->name('course_subject');
 Route::get('/admin/subject','course_DepController@index')->name('course_subject');
 Route::post('/admin/subject','course_DepController@store')->name('course_subject');
+Route::post('/admin/subject','course_DepController@departmentDetials')->name('dept_details');
 
 
 

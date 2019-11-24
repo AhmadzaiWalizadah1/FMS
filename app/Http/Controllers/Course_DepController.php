@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
-use App\Models\Departement;
+use App\Models\Department;
 use App\Models\Course;
 use DB;
 
@@ -12,17 +12,17 @@ class Course_DepController extends Controller
     // index method
     public function index()
      {
-        return view('admin.subject');
+        $dept = Department::all();
+        return view('admin.subject')->with('dept', $dept);
     }
 
     public function create()
     {
         //
     }
-// STORE METHOD
+    // store method
     public function store(Request $request)
     {
-
       // getting the data from the form and store it into database
       $course = new Course;
       $course->Title = request('Title');
@@ -33,10 +33,21 @@ class Course_DepController extends Controller
       $course->save();
       return redirect('admin/subject');
     }
+    // department 
+    public function departmentDetials(Request $request){
+        $department = new Department;
+        $department->Title = request('dTtitle');
+        $department ->E_title = request('dE_title');
+        $department ->save();
+        return redirect('admin/subject');
+    }
+
+
     public function show($id)
     {
-        //
-    }
+        $dept = Department::all();
+        dd($dept);   
+     }
 
     public function edit($id)
     {
