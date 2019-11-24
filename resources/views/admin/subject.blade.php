@@ -13,7 +13,8 @@
     <div class="col-md-12">
       <div class="row">
         <!-- The cards for departments that show the details of departments -->
-        <div class="col-md-3 col-md-offset-1" style= " margin-top:3%; border: 1px solid rgb(39, 115, 202); text-align:right;">
+        <div class="col-md-3 col-md-offset-1" style= " margin-top:3%; border: 1px solid
+         rgb(39, 115, 202); text-align:right;">
 
           <label>
             <h4 >لیست دیپارتمنت ها</h4>
@@ -134,7 +135,8 @@
             <div class="modal-body text-right">
 
               <!-- The form for Subjects that collect info -->
-              <form action="" method="post" >
+              <form action="{{url('admin/subject')}}" method="POST" >
+                {{ csrf_field() }}
 
                   <tr>
                     <td>
@@ -231,8 +233,8 @@
               <td>
 
                 <select name="tD_ID"  class="form-control " dir="rtl">
-
-
+                  <option value="1">1</option>
+                  <option value="2">2</option>
                 </select>
               </td>
             </tr>
@@ -247,7 +249,7 @@
         <!-- the footer of subject Modal -->
         <div class="modal-footer">
           <button type="button" class="btn btn-primary " data-dismiss="modal">بازگشت</button>
-            <input type="submit" name="save_course" class="btn btn-primary btn-md" value="ذخیره"></input>
+            <input type="submit" class="btn btn-primary btn-md" value="ذخیره"></input>
         </div>
         <!-- End of the subject Modal -->
       </form>

@@ -10,31 +10,31 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+// Routes to the Authentication middlwares
+Auth::routes();
 // route the welcome page
 Route::get('/', function () {
   return view('welcome');
 });
-// Routes to the Authentication middlwares
-Auth::routes();
-
 // Route to the Home page
 Route::get('/home', 'HomeController@index')->name('home');
-
 // ADMIN GROUP
 Route::group([ 'middleware' => 'auth' ], function() {
-  // MAIN DASHBOARD
+// MAIN DASHBOARD
   Route::get('/admin/attendance', 'HomeController@attendance')->name('attendance');
 
-  // change the staff controller
+// change the staff controller
   Route::get('/admin/staff', 'staffController@index')->name('staff');
-  Route::post('/admin/staff','staffController@store')->name('staff');
-  // sawaneh controller
-  Route::post('/admin/staff','Sawaneh_ResultController@store')->name('sawanih_result');
+  Route::get('/admin/staff','staffController@store')->name('staff');
+
+// subject controller 
+// Route::get('/admin/subject','course_DepController@course_Details')->name('course_subject');
+Route::get('/admin/subject','course_DepController@index')->name('course_subject');
+Route::post('/admin/subject','course_DepController@store')->name('course_subject');
 
 
-  // LIVE SEARCH ROUTES
-Route::get('/live_search', 'LiveSearch@index');
-Route::get('/live_search/action', 'LiveSearch@action')->name('live_search.action');
+
+
 
 // other functionality
 Route::any('/search',function(){
@@ -43,10 +43,6 @@ Route::any('/search',function(){
   if(count($user) > 0)
   return view('admin.staff')->withDetails($user)->withQuery ( $q );
   else return view ('admin.staff')->withMessage('No Details found. Try to search again !');
-});
-
-Route::get ( '/', function () {
-  return view ( 'welcome' );
 });
 
 Route::any ( '/search', function () {
@@ -86,15 +82,11 @@ Route::any ( '/search', function () {
   Route::get('/admin/staff/search', 'staffController@staff_search')->name('staff_search');
 
 
-
-
-
   Route::get('admin', function () {
     return view('admin.dashboard') ;
   }) ;
   Route::get('/admin/classes', function () {
     return view('admin.classes') ;
   }) ;
-
   Route::get('admin/users', 'UsersController@index')->name('user.index') ;
-});
+  });

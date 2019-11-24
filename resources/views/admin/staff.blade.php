@@ -3,7 +3,7 @@
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
 <!-- LINK OF AJAX SEARCH -->
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
 
 <div class="container-fluid">
   <!-- the header of the page -->
@@ -15,7 +15,7 @@
     <!-- Creating new staff -->
     <div class="col-sm-4 col-xs-4">
       <form  action="{{URL::to('/admin/staff/')}}" method="post" role="search">
-      {{ csrf_field() }}
+        {{ csrf_field() }}
         <a class="btn btn-primary"  data-toggle="modal" data-target="#new-staf"> ایجاد کارمند جدید</a>
       </div>
       <!-- end of the process -->
@@ -24,7 +24,7 @@
       <div class="row " >
         <div class="dleft">
           <form  action="{{route('staff_search')}}" method="GET">
-          {{ csrf_field() }}
+            {{ csrf_field() }}
             <button type="submit" name="button" class="btn btn-primary">جستجو</button>
           </div>
           <div class="col-md-4 dleft" >
@@ -36,114 +36,114 @@
       </div>
       <!--END OF THE SEARCH BOX  -->
 
-  <!-- SEARCH RESULT  -->
+      <!-- SEARCH RESULT  -->
 
-<div class="container">
+      <div class="container">
     <!-- @if(isset($details))
-        <p> The Search results for your query <b> {{ $query }} </b> are :</p> -->
-    <h2>Sample User details</h2>
-    <table class="table table-striped">
+      <p> The Search results for your query <b> {{ $query }} </b> are :</p> -->
+      <h2>Sample User details</h2>
+      <table class="table table-striped">
         <thead>
-            <tr>
-                <th>آی دی</th>
-                <th>نام</th>
-                <th>نام پدر</th>
-                <th>تخلص</th>
-                <th>وظیفه</th>
-                <th>درجه تحصیل</th>
-                <th>شماره مبایل</th>
-            </tr>
+          <tr>
+            <th>آی دی</th>
+            <th>نام</th>
+            <th>نام پدر</th>
+            <th>تخلص</th>
+            <th>وظیفه</th>
+            <th>درجه تحصیل</th>
+            <th>شماره مبایل</th>
+          </tr>
         </thead>
         <tbody>
-            @foreach($details as $user)
+          @foreach($details as $user)
+          <tr>
+            <td>{{$user->Staff_ID}}</td>
+            <td>{{$user->Name}}</td>
+            <td>{{$user->F_Name}}</td>
+            <td>{{$user->Last_name}}</td>
+            <td>{{$user->Position}}</td>
+            <td>{{$user->Degree}}</td>
+            <td>{{$user->Contact}}</td>
+          </tr>
+          @endforeach
+        </tbody>
+      </table>
+      @endif
+    </div>
+    <!-- END OF THE SEARCH RESULT -->
+  </form>
+</div>
+<!--end of the first row-->
+<br>
+<hr>
+<br>
+<!-- for the better layout purpose -->
+
+
+<!-- Second row start from here.. -->
+<div class="row">
+
+  <!-- container for the table  -->
+  <div class="col-xs-12 col-sm-12 col-md-12">
+    <!-- the table  -->
+    <div class="table-responsive">
+      <br>
+      <div class="table table-bordered">
+        <table class="table table-hover table-bordered btn-in-table">
+          <thead >
+            <th class="left">شماره تلیفون</th>
+            <th class="left">درجه تحصیلی</th>
+            <th class="left">وظیفه</th>
+            <th class="left">تخلص</th>
+            <th class="left">نام پدر</th>
+            <th class="left">نام</th>
+            <th class="left">آی دی نمبر</th>
+          </thead>
+          <tbody>
+            @foreach ($staff as $stafff)
             <tr>
-                <td>{{$user->Staff_ID}}</td>
-                <td>{{$user->Name}}</td>
-                <td>{{$user->F_Name}}</td>
-                <td>{{$user->Last_name}}</td>
-                <td>{{$user->Position}}</td>
-                <td>{{$user->Degree}}</td>
-                <td>{{$user->Contact}}</td>
+              <td>{{$stafff ->Contact}}</td>
+              <td>{{$stafff ->Degree}}</td>
+              <td>{{$stafff ->Position}}</td>
+              <td>{{$stafff ->Last_name}}</td>
+              <td>{{$stafff ->F_Name}}</td>
+              <td>{{$stafff ->Name}}</td>
+              <td>{{$stafff ->Staff_ID}}</td>
+
             </tr>
             @endforeach
-        </tbody>
-    </table>
-    @endif
-</div>
-<!-- END OF THE SEARCH RESULT -->
-    </form>
-  </div>
-  <!--end of the first row-->
-  <br>
-  <hr>
-  <br>
-  <!-- for the better layout purpose -->
 
-
-  <!-- Second row start from here.. -->
-  <div class="row">
-
-    <!-- container for the table  -->
-    <div class="col-xs-12 col-sm-12 col-md-12">
-      <!-- the table  -->
-      <div class="table-responsive">
-        <br>
-        <div class="table table-bordered">
-          <table class="table table-hover table-bordered btn-in-table">
-            <thead >
-              <th class="left">شماره تلیفون</th>
-              <th class="left">درجه تحصیلی</th>
-              <th class="left">وظیفه</th>
-              <th class="left">تخلص</th>
-              <th class="left">نام پدر</th>
-              <th class="left">نام</th>
-              <th class="left">آی دی نمبر</th>
-            </thead>
-            <tbody>
-              @foreach ($staff as $stafff)
-              <tr>
-                <td>{{$stafff ->Contact}}</td>
-                <td>{{$stafff ->Degree}}</td>
-                <td>{{$stafff ->Position}}</td>
-                <td>{{$stafff ->Last_name}}</td>
-                <td>{{$stafff ->F_Name}}</td>
-                <td>{{$stafff ->Name}}</td>
-                <td>{{$stafff ->Staff_ID}}</td>
-
-              </tr>
-              @endforeach
-
-            </tbody>
-          </table>
-        </div>
+          </tbody>
+        </table>
       </div>
     </div>
-
-    <!-- end of the second row -->
   </div>
 
-  <!-- Modal start from here.... -->
-  <!-- Modal button  -->
-  <form  action="{{action('staffController@store')}}" method="post">
-    <!-- adding csrf token -->
-    {{ csrf_field() }}
+  <!-- end of the second row -->
+</div>
 
-    <div class="modal fade" id="new-staf" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <!-- the Modal div that contain all content of the Modal -->
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <!-- the Modal headaer part -->
-          <div class="modal-header">
+<!-- Modal start from here.... -->
+<!-- Modal button  -->
+<form  action="{{action('staffController@store')}}" method="post">
+  <!-- adding csrf token -->
+  {{ csrf_field() }}
 
-            <div class="text-center">
-              <h4 class="modal-title" id="exampleModalLabel">فورمه ایجاد شقه امتحانات</h4>
-            </div>
+  <div class="modal fade" id="new-staf" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- the Modal div that contain all content of the Modal -->
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <!-- the Modal headaer part -->
+        <div class="modal-header">
 
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+          <div class="text-center">
+            <h4 class="modal-title" id="exampleModalLabel">فورمه ایجاد شقه امتحانات</h4>
           </div>
-          <div class="modal-body">
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
             <!-- this is the body of the Modal in here we are going to put the
             necessery containt about student, student score, Home Work of studnt
             and many more usefull information
@@ -227,28 +227,28 @@
 <!-- JQUERY CODE  -->
 
 <script>
-$(document).ready(function(){
+  $(document).ready(function(){
 
- fetch_customer_data();
+   fetch_customer_data();
 
- function fetch_customer_data(query = '')
- {
-  $.ajax({
-   url:"{{ route('live_search.action') }}",
-   method:'GET',
-   data:{query:query},
-   dataType:'json',
-   success:function(data)
+   function fetch_customer_data(query = '')
    {
-    $('tbody').html(data.table_data);
-    $('#total_records').text(data.total_data);
-   }
+    $.ajax({
+     url:"{{ route('live_search.action') }}",
+     method:'GET',
+     data:{query:query},
+     dataType:'json',
+     success:function(data)
+     {
+      $('tbody').html(data.table_data);
+      $('#total_records').text(data.total_data);
+    }
   })
- }
- $(document).on('keyup', '#search', function(){
-  var query = $(this).val();
-  fetch_customer_data(query);
- });
+  }
+  $(document).on('keyup', '#search', function(){
+    var query = $(this).val();
+    fetch_customer_data(query);
+  });
 });
 </script>
 
