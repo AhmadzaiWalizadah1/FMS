@@ -124,7 +124,7 @@
 
 <!-- Modal start from here.... -->
 <!-- Modal button  -->
-<form  action="{{action('staffController@store')}}" method="post">
+<form  action="{{route('staff_post')}}" method="post">
   <!-- adding csrf token -->
   {{ csrf_field() }}
 
@@ -247,27 +247,9 @@
   }
   $(document).on('keyup', '#search', function(){
     var query = $(this).val();
-    fetch_customer_data(query);
-  });
-});
-</script>
+
 
 <!-- END OF THE JQUERY CODE -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

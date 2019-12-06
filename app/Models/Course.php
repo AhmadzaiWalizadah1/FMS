@@ -40,14 +40,6 @@ class Course extends Eloquent
 		'Year' => 'int'
 	];
 
-	protected $fillable = [
-		'Title',
-		'E_title',
-		'Credits',
-		'Semester',
-		'D_ID'
-	];
-
 	public function department()
 	{
 		return $this->belongsTo(\App\Models\Department::class, 'D_ID');

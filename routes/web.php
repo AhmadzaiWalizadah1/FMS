@@ -25,12 +25,12 @@ Route::group([ 'middleware' => 'auth' ], function() {
 
 // change the staff controller
   Route::get('/admin/staff', 'staffController@index')->name('staff');
-  Route::get('/admin/staff','staffController@store')->name('staff');
+  Route::post('/admin/staff','staffController@store')->name('staff_post');
 
 // subject controller 
 // Route::get('/admin/subject','course_DepController@course_Details')->name('course_subject');
 Route::get('/admin/subject','course_DepController@index')->name('course_subject');
-Route::post('/admin/subject','course_DepController@store')->name('course_subject');
+Route::post('/admin/subject/cou','course_DepController@store')->name('course_subject');
 Route::post('/admin/subject','course_DepController@departmentDetials')->name('dept_details');
 
 
