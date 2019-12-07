@@ -23,7 +23,7 @@
       <!-- MAKE THE SEARCH BOX -->
       <div class="row " >
         <div class="dleft">
-          <form  action="{{route('staff_search')}}" method="GET">
+          <form  action="" method="GET">
             {{ csrf_field() }}
             <button type="submit" name="button" class="btn btn-primary">جستجو</button>
           </div>
@@ -234,7 +234,7 @@
    function fetch_customer_data(query = '')
    {
     $.ajax({
-     url:"{{ route('live_search.action') }}",
+     url:"",
      method:'GET',
      data:{query:query},
      dataType:'json',
