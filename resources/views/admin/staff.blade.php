@@ -14,7 +14,7 @@
 
     <!-- Creating new staff -->
     <div class="col-sm-4 col-xs-4">
-      <form  action="{{URL::to('/admin/staff/')}}" method="post" role="search">
+      <form  action="{{route('add_staff')}}" method="post" role="search">
         {{ csrf_field() }}
         <a class="btn btn-primary"  data-toggle="modal" data-target="#new-staf"> ایجاد کارمند جدید</a>
       </div>
@@ -23,7 +23,7 @@
       <!-- MAKE THE SEARCH BOX -->
       <div class="row " >
         <div class="dleft">
-          <form  action="" method="GET">
+          <form  action="{{route('search_staff')}}" method="GET">
             {{ csrf_field() }}
             <button type="submit" name="button" class="btn btn-primary">جستجو</button>
           </div>
@@ -128,7 +128,7 @@
   <!-- adding csrf token -->
   {{ csrf_field() }}
 
-  <div class="modal fade" id="new-staf" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="new-staff" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <!-- the Modal div that contain all content of the Modal -->
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -136,7 +136,7 @@
         <div class="modal-header">
 
           <div class="text-center">
-            <h4 class="modal-title" id="exampleModalLabel">فورمه ایجاد شقه امتحانات</h4>
+            <h4 class="modal-title" id="exampleModalLabel">فورمه ایجاد کارمند جدید</h4>
           </div>
 
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -215,6 +215,7 @@
     </div>
   </div>
 </div>
+
 <!-- end of the Modal container -->
 
 <!-- Modal end in here.... -->

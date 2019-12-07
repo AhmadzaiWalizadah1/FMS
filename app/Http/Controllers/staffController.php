@@ -42,7 +42,7 @@ class staffController extends Controller
       return redirect('admin/staff');
     }
   // adding search method
-  public function staff_search() {
+  public function search_staff() {
     $value = Input::get('search');
     $staff = Staff::where('Staff_ID', 'LIKE', '%' . $value . '%')->limit(25)->get();
     return view('admin.staff') ->with('staffs', $staff);

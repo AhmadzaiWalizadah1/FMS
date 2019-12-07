@@ -27,7 +27,7 @@ Route::group([ 'middleware' => 'auth' ], function() {
   Route::get('/admin/staff', 'staffController@index')->name('staff');
   Route::post('/admin/staff','staffController@store')->name('staff_post');
 
-// subject controller 
+// subject controller
 // Route::get('/admin/subject','course_DepController@course_Details')->name('course_subject');
 Route::get('/admin/subject','course_DepController@index')->name('course_subject');
 Route::post('/admin/subject/cou','course_DepController@store')->name('course_subject');
@@ -80,7 +80,8 @@ Route::any ( '/search', function () {
   // search students
   Route::get('/admin/kankor/search', 'Kankor_ResultController@student_search')->name('student_search');
   // staff search
-  Route::get('/admin/staff/search', 'staffController@staff_search')->name('staff_search');
+  Route::get('/admin/staff/search', 'staffController@search_staff')->name('search_staff');
+  Route::get('/admin/staff/add_staff', 'staffController@add_staff')->name('add_staff');
 
 
   Route::get('admin', function () {
