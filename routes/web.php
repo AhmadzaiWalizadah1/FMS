@@ -80,8 +80,7 @@ Route::any ( '/search', function () {
   // search students
   Route::get('/admin/kankor/search', 'Kankor_ResultController@student_search')->name('student_search');
   // staff search
-  Route::get('/admin/staff/search', 'staffController@search_staff')->name('search_staff');
-  Route::get('/admin/staff/add_staff', 'staffController@add_staff')->name('add_staff');
+  Route::get('/admin/staff/staff_search', 'staffController@staff_search')->name('staff_search');
 
 
   Route::get('admin', function () {

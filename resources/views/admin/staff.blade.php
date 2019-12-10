@@ -3,7 +3,7 @@
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
 <!-- LINK OF AJAX SEARCH -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
 <div class="container-fluid">
   <!-- the header of the page -->
@@ -14,16 +14,16 @@
 
     <!-- Creating new staff -->
     <div class="col-sm-4 col-xs-4">
-      <form  action="{{route('add_staff')}}" method="post" role="search">
+      <form  action="" method="post" role="store">
         {{ csrf_field() }}
-        <a class="btn btn-primary"  data-toggle="modal" data-target="#new-staf"> ایجاد کارمند جدید</a>
+        <a class="btn btn-primary"  data-toggle="modal" data-target="#new-staff" > ایجاد کارمند جدید</a>
       </div>
       <!-- end of the process -->
-      <!-- added another commit -->
+
       <!-- MAKE THE SEARCH BOX -->
       <div class="row " >
         <div class="dleft">
-          <form  action="{{route('search_staff')}}" method="GET">
+          <form  action="{{route('staff_search')}}" method="GET">
             {{ csrf_field() }}
             <button type="submit" name="button" class="btn btn-primary">جستجو</button>
           </div>
@@ -143,7 +143,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body" >
             <!-- this is the body of the Modal in here we are going to put the
             necessery containt about student, student score, Home Work of studnt
             and many more usefull information

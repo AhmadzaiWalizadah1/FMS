@@ -1,5 +1,5 @@
 <?php
-	 // using namespace model 
+	 // using namespace model
 namespace App\Models;
 
 use Reliese\Database\Eloquent\Model as Eloquent;

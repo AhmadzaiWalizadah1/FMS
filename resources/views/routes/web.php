@@ -41,7 +41,7 @@ Route::group([ 'middleware' => 'auth' ], function() {
 
   // search students
   Route::get('/admin/kankor/search', 'Kankor_ResultController@student_search')->name('student_search');
-  Route::get('/admin/staff/search', 'staffController@search_staff')->name('search_staff');
+  Route::get('/admin/staff/search', 'staffController@staff_search')->name('staff_search');
 
 
 
