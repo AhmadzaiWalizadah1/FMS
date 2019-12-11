@@ -17,22 +17,24 @@
       <form  action="" method="post" role="store">
         {{ csrf_field() }}
         <a class="btn btn-primary"  data-toggle="modal" data-target="#new-staff" > ایجاد کارمند جدید</a>
+      </form>
       </div>
       <!-- end of the process -->
 
       <!-- MAKE THE SEARCH BOX -->
       <div class="row " >
+        <form  action="{{route('staff_search')}}" method="GET">
+
         <div class="dleft">
-          <form  action="{{route('staff_search')}}" method="GET">
             {{ csrf_field() }}
             <button type="submit" name="button" class="btn btn-primary">جستجو</button>
           </div>
           <div class="col-md-4 dleft" >
 
             <input type="search" name="search" placeholder="  را وارد نماید ID " class="form-control" style="text-align:right">
-
+          </div>
           </form>
-        </div>
+
       </div>
       <!--END OF THE SEARCH BOX  -->
 

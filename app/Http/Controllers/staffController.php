@@ -12,6 +12,7 @@ class staffController extends Controller
     }
     public function index()
     {
+
         $staff = Staff:: all();
         return view('admin.staff')->with('staff', $staff);
 
@@ -46,7 +47,9 @@ class staffController extends Controller
     $value = Input::get('search');
     $staff = Staff::where('Staff_ID', 'LIKE', '%' . $value . '%')->limit(25)->get();
     return view('admin.staff') ->with('staff', $staff);
+
   }
+
 //    SHOW METHOD
     public function show($id)
     {
