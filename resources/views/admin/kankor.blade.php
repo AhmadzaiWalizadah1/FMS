@@ -3,6 +3,7 @@
 @section('content')
 
   <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
+  
 <div class="container-fluid">
 <h2 style="text-align:right">لیست نتایج کانکور</h2>
 <br>

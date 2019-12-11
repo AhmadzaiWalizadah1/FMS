@@ -10,34 +10,33 @@
 <br>
 
   <!-- The form for collecting information -->
-<form action="{{route('sawanih_result')}}" method="POST">
+<form action="{{route('store_sawaneh_form')}}" method="POST">
   <div class="col-xs-6 col-sm-6 col-md-4" style="text-align: right;float: right;">
 
     <!-- Kandor id input field -->
     <div class="form-group">
       <label for="exampleInputEmail1" class="control-label rig textRight">kankor ID</label>
-
       <input type="text" class="form-control  textRight" name="k_id" id="exampleInputEmail1"  required="required">
     </div>
+
     <!-- the name field -->
     <div class="form-group">
       <label  for="exampleInputEmail1 " class="control-label   rig textRight">نام</label>
-
       <input type="text" class="form-control  textRight" name="name" id="exampleInputEmail1"  required="required">
-
     </div>
+
     <!-- the fathername field -->
     <div class="form-group">
       <label for="inputEmail3" class=" control-label rig textLeft">نام پدر</label>
-
       <input type="text" class="form-control  textRight" name="f_name" id="inputEmail3"  required="required">
     </div>
+
     <!-- the Grandfathername field -->
     <div class="form-group">
       <label for="inputEmail3" class=" control-label rig textLeft">نام پدر کلان</label>
-
       <input type="text" class="form-control textRight" name="gf_name" id="inputEmail3">
     </div>
+
 <!-- the sureName field of the contents -->
     <div class="form-group">
       <label for="inputEmail3" class=" control-label rig textLeft" >تخلص</label>
@@ -47,14 +46,12 @@
     <!-- The school field  -->
     <div class="form-group">
       <label for="inputEmail3" class="control-label rig textLeft">مکتب</label>
-
       <input type="text" class="form-control  textRight" name="school" id="inputEmail3"  required="required">
     </div>
 
     <!-- the school name field in english -->
     <div class="form-group">
       <label for="inputEmail3" class="control-label rig textLeft">مکتب به انگلیسی</label>
-
       <input type="text" class="form-control  textRight" name="e_school" id="inputEmail3"  required="required">
     </div>
 
@@ -63,6 +60,7 @@
       <label for="inputEmail3" class=" control-label rig textLeft">سال فراغت</label>
       <input type="text" class="form-control  textRight" name="g_year" id="inputEmail3"  required="required">
     </div>
+
     <!-- kankor Grade -->
     <div class="form-group">
       <label for="inputEmail3" class=" control-label rig textLeft">نمره کانکور</label>
@@ -74,6 +72,7 @@
       <label for="inputEmail3" class=" control-label rig textLeft">نتیجه کانکور</label>
       <input type="text" class="form-control textRight" name="faculty" id="inputEmail3"  required="required">
     </div>
+
       <!-- The province Field  -->
     <div class="form-group">
       <label for="inputEmail3" class=" control-label rig textLeft">ولایت</label>
@@ -118,6 +117,7 @@
 
     </div>
     <!-- end of the form container -->
+
     <!-- the Gender Field -->
     <div class="form-group">
       <label for="inputEmail3" class=" control-label rig textLeft">جنسیت</label>
@@ -130,9 +130,9 @@
       <!-- The ID field -->
     <div class="form-group">
       <label for="exampleInputEmail1" class="control-label rig textRight">شاگرد‌ ID</label>
-
       <input type="text" class="form-control  textRight" id="exampleInputEmail1" name="S_ID"  required="required">
     </div>
+
     <!-- father name in english field -->
     <div class="form-group">
       <label  for="exampleInputEmail1" class="control-label   rig textRight">نام به انگلیسی</label>
@@ -432,9 +432,9 @@
 <!-- end of the form -->
   </div>
   <!-- end of the container -->
-  <div class="col-xs-6 col-sm-6 col-md-4 " style="text-align: right;float: right;">
+  <div class="col-xs-6 col-sm-6 col-md-4 " style=" text-align: right; float: right;">
   </div>
 </form>
-<!-- end oft -->
+<!-- end of t -->
 </div>
 @stop

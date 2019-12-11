@@ -74,13 +74,16 @@ Route::any ( '/search', function () {
   Route::get('/admin/transcript_dari', 'HomeController@transcript_dari')->name('transcript_dari');
   Route::get('/admin/transcript_english', 'HomeController@transcript_english')->name('transcript_english');
 
-  //post method
+  //post methods
+  Route::post('/admin/sawanehForm', 'Sawaneh_Controller@store')->name('store_sawaneh_form');
   Route::post('/admin/kankorForm', 'Kankor_ResultController@store')->name('store_kankor_form');
-
   // search students
   Route::get('/admin/kankor/search', 'Kankor_ResultController@student_search')->name('student_search');
   // staff search
   Route::get('/admin/staff/search', 'staffController@staff_search')->name('staff_search');
+  // sawaneh Post
+  Route::get('/admin/sawaneh/search', 'Sawaneh_Controller@sawaneh_search')->name('sawaneh_search');
+
 
 
   Route::get('admin', function () {

@@ -2,6 +2,8 @@
 
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
 <div class="container-fluid">
   <h2 style="text-align:right"> سوانح محصلین</h2>
   <br>
@@ -10,8 +12,8 @@
 
     <!-- Creating new Sawanih -->
     <div class="col-sm-3 col-xs-3">
-      <form  action="" method="post">
-        <a href="{{route('sawanehForm')}}" class="btn btn-primary"> ایجاد سوانح تبدیلی</a>
+      <form  action="sawanehForm" method="post">
+        <a href="{{route('sawanehForm')}}" class="btn btn-primary">ایجاد سوانح تبدیلی</a>
       </div>
       <!-- The Search bar for this page -->
       <div class="col-md-4 col-sm-7 col-xs-7 " >
@@ -20,10 +22,11 @@
     </div>
 
     <!-- The Search button for this page -->
+    <form >
     <div class="col-sm-2 col-xs-2" >
       <input type="submit" name="submit" value="جستجو" class="btn btn-primary">
     </div>
-
+  </form>
   </div>
   <!-- End of the first row -->
   <br>
@@ -68,5 +71,6 @@
 
   <!-- end of the container -->
 </div>
+
 
 @stop

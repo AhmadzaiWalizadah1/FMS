@@ -147,8 +147,7 @@
         </div>
         <div class="modal-body" >
             <!-- this is the body of the Modal in here we are going to put the
-            necessery containt about student, student score, Home Work of studnt
-            and many more usefull information
+            necessery containt about staff
           -->
 
           <div dir="rtl">

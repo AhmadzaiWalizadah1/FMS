@@ -24,7 +24,6 @@ Route::group([ 'middleware' => 'auth' ], function() {
   // MAIN DASHBOARD
   Route::get('/admin/attendance', 'HomeController@attendance')->name('attendance');
   Route::get('/admin/staff', 'HomeController@staff')->name('staff');
-
   Route::get('/admin/transcript', 'HomeController@transcript')->name('transcript');
   Route::get('/admin/kankor', 'Kankor_ResultController@index')->name('kankor');
   Route::get('/admin/semister_result', 'HomeController@semister_result')->name('semister_result');
@@ -38,10 +37,12 @@ Route::group([ 'middleware' => 'auth' ], function() {
 
   //post method
   Route::post('/admin/kankorForm', 'Kankor_ResultController@store')->name('store_kankor_form');
+  Route::post('/admin/sawanehForm', 'Sawaneh_Controller@store')->name('store_sawaneh_form');
 
   // search students
   Route::get('/admin/kankor/search', 'Kankor_ResultController@student_search')->name('student_search');
   Route::get('/admin/staff/search', 'staffController@staff_search')->name('staff_search');
+  Route::get('/admin/sawaneh/search', 'Sawaneh_Controller@sawaneh_search')->name('sawaneh_search');
 
 
 
