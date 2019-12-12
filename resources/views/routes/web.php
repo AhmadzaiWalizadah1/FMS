@@ -43,6 +43,7 @@ Route::group([ 'middleware' => 'auth' ], function() {
   Route::get('/admin/kankor/search', 'Kankor_ResultController@student_search')->name('student_search');
   Route::get('/admin/staff/search', 'staffController@staff_search')->name('staff_search');
   Route::get('/admin/sawaneh/search', 'Sawaneh_Controller@sawaneh_search')->name('sawaneh_search');
+  Route::get('/admin/attendance/search', 'Attendance_Controller@attendance_search')->name('attendance_result');
 
 
 

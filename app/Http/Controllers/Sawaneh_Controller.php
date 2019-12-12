@@ -1,11 +1,10 @@
-
-
 <?php
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use App\models\StudentInfo;
-use DB;
+
 
 
 class Sawaneh_Controller extends Controller
@@ -44,54 +43,28 @@ public function sawaneh_search() {
         //
     }
 
-
-
-
-
-
-
-
-
-
-
     // STORE METHOD
-    public function store(Request $request)
-    {
-
-
-
-      $kankor_result = StudentInfo::create([
-          'k_id' => $request->k_id,
-          'name'    => $request->name,
-          'f_name' => $request->f_name,
-          'gf_name'       => $request->gf_name,
-          'last_name'   => $request->last_name,
-          'school'    => $request->school,
-          'e_school'  =>  $request->e_school ,
-          'g_year'  =>  $request->g_year,
-          'k_exam_year'  =>  $request->k_exam_year ,
-          'kankor_score'  =>  $request->kankor_score ,
-          'faculty'  =>  $request->faculty ,
-          'province'  =>  $request->province  ,
-          'gender'  =>  $request->gender ,
-      ]);
-
-
-
-      return redirect()->route('sawanehForm') ;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
+    // public function store(Request $request)
+    // {
+    //
+    //   $students = StudentInfo::create([
+    //       'k_id' => $request->k_id,
+    //       'name'    => $request->name,
+    //       'f_name' => $request->f_name,
+    //       'gf_name'       => $request->gf_name,
+    //       'last_name'   => $request->last_name,
+    //       'school'    => $request->school,
+    //       'e_school'  =>  $request->e_school ,
+    //       'g_year'  =>  $request->g_year,
+    //       'k_exam_year'  =>  $request->k_exam_year ,
+    //       'kankor_score'  =>  $request->kankor_score ,
+    //       'faculty'  =>  $request->faculty ,
+    //       'province'  =>  $request->province  ,
+    //       'gender'  =>  $request->gender ,
+    //   ]);
+    //
+    //   return redirect()->route('sawanehForm') ;
+    // }
 
     /**
      * Store a newly created resource in storage.
@@ -101,7 +74,7 @@ public function sawaneh_search() {
      */
     public function store(Request $request)
     {
-      $std = new StudentInf;
+      $std = new StudentInfo;
       $std ->K_ID = $request('k_id');
       $std ->save();
         return redirect('admin/sawaneh');
@@ -115,9 +88,7 @@ public function sawaneh_search() {
      */
     public function show($id)
     {
-
-
-
+      //
     }
 
     /**

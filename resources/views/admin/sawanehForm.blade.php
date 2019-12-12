@@ -114,8 +114,8 @@
         <option value='هلمند'>هلمند</option>
       </select>
       <!-- end of the select field -->
-
     </div>
+
     <!-- end of the form container -->
 
     <!-- the Gender Field -->
@@ -189,7 +189,7 @@
     </div>
     <!-- The footer of Modal -->
     <div class="modal-footer">
-     <a href="{{route('sawanih_result')}}" class="btn btn-primary">بازگشت</a>
+     <a href="{{route('sawaneh')}}" class="btn btn-primary">بازگشت</a>
      <input type="submit" name="" value="Save">
   </div>
   </div>
@@ -432,8 +432,7 @@
 <!-- end of the form -->
   </div>
   <!-- end of the container -->
-  <div class="col-xs-6 col-sm-6 col-md-4 " style=" text-align: right; float: right;">
-  </div>
+
 </form>
 <!-- end of t -->
 </div>

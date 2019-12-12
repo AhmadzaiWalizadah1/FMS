@@ -9,24 +9,24 @@
 
     <!-- first row start from here.... -->
     <div class="row " >
-
-      <div class="col-sm-4 col-xs-4">
-        <!-- The search button -->
-        <form  action="" method="post">
-          <button type="button" class="btn btn-primary   " data-toggle="modal" data-target="#new-staf">ایجاد حاضری جدید</button>
-        </div>
+      <form  action="{{route('attendance_result')}}" method="post">
+          <div class="col-sm-4 col-xs-4">
+          <!-- The search button -->
+            <button type="button" class="btn btn-primary   " data-toggle="modal" data-target="#new-staf">ایجاد حاضری جدید</button>
+          </div>
 
         <!-- The search box -->
-        <div class="col-md-4 col-sm-6 col-xs-6" >
-          <input type="text" class="form-control" placeholder="برای نمایش حاضری سال را وارد نمایید">
-        </form>
-      </div>
+          <div class="col-md-4 col-sm-6 col-xs-6" >
+            <input type="text" class="form-control" placeholder="برای نمایش حاضری سال را وارد نمایید">
+          </div>
       <!-- end of the search box -->
 
-      <div class=" col-sm-2 col-xs-2" >
+          <div class=" col-sm-2 col-xs-2" >
         <!-- <button type="button" class="btn btn-primary   " data-toggle="modal" data-target="#new-attendence">ایجاد حاضری جدید</button> -->
+            <input type="submit" name="submityear" value="جستجو" class="btn btn-primary"></input>
+          </div>
+      </form>
 
-        <input type="submit" name="submityear" value="جستجو" class="btn btn-primary"></input>
       </div>
 
     </div>
