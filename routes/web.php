@@ -83,7 +83,8 @@ Route::any ( '/search', function () {
   Route::get('/admin/staff/search', 'staffController@staff_search')->name('staff_search');
   // sawaneh Post
   Route::get('/admin/sawaneh/search', 'Sawaneh_Controller@sawaneh_search')->name('sawaneh_search');
-
+  // attendence_result route
+  Route::get('/admin/attendence_result','attendenceController@att_result')->name('attendence_result');
 
 
   Route::get('admin', function () {

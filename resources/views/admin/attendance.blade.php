@@ -171,10 +171,8 @@
       <div class='row'>
         <div class='col-xs-6 col-sm-6 col-md-11 col-xs-offset-1 col-sm-offset-1 col-md-offset-1' style='margin-top:7%'>
 
-          <input type='submit' name='submit1' value='نمایش و چاپ' class='btn btn-primary '></input>
-          <button type="submit" name="export_phpexcel" class="btn btn-primary " style="float: right;">ایجاد حاضری در اکسیل</button>
+          <a  href="{{route('attendence_result')}}" name='submit1' class='btn btn-primary '>نمایش و چاپ</a>
         </div>
-
 
       </div>
     </form>
