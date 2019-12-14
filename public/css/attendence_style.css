@@ -1,0 +1,34 @@
+body {
+background-color: white;
+}
+
+/* hide the footer of the page */
+.main-footer {
+}
+/* make the table bordered */
+.table-dark {
+background-color: black;
+color: white;
+border: 1px solid black;
+}
+table {
+margin-bottom: 0px;
+}
+tr, td {
+border: 1px solid black;
+}
+.present {
+ border-bottom: none;
+}
+.absent {
+border-bottom: none;
+}
+/* signature */
+.signature {
+background-color: white;
+color: black;
+margin-top: 0px;
+padding:10px;
+direction: rtl;
+margin-bottom: 10px;
+}
