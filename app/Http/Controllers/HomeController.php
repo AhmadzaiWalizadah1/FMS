@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
+use App\Models\Department;
+use App\Models\Course;
+use DB;
 
 class HomeController extends Controller
 {
@@ -59,6 +64,12 @@ class HomeController extends Controller
       return view('admin.transcript_english');
     }
     public function attendance(){
-      return view('admin.attendance');
+
+      $subjects=
+      DB::select('select E_title from courses ');
+     
+      
+
+      return view('admin.attendance')->with('subjects',$subjects);
     }
 }

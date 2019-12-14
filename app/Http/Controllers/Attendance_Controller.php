@@ -44,7 +44,7 @@ class Attendance_Controller extends Controller
     $value = Input::get('search');
 
     $attendance = Attendance::where('Year', '=', $value )->where('Semester', '=', '[7,8]' )->limit(25)->get();
-    dd($attendance)
+   
     return view('admin.attendance') ->with('attendance', $attendance);
 
   }

@@ -48,7 +48,7 @@
           <div class="modal-header">
 
             <div class="text-center">
-              <h4 class="modal-title" id="exampleModalLabel">فورمه ایجاد شقه امتحانات</h4>
+              <h4 class="modal-title" id="exampleModalLabel">فورمه ایجاد حاضری امتحانات</h4>
             </div>
 
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -69,7 +69,14 @@
           <!-- subject name -->
           <div dir="rtl">
             <label for="subjectname">نام مضمون</label>
-            <input type="text" id="subjectname" value="" class="form-control" placeholder="نام مضمون">
+            <select class="form-control" name="subject">
+                <option value="none">انتخاب</option>
+               
+                    {{-- @foreach($subjects as $subject)
+                        <option value="{{$subject}}" > {{$subject}}</option>
+                    @endforeach     --}}
+                </select>
+            {{-- <input type="text" id="subjectname" value="" class="form-control" placeholder="نام مضمون"> --}}
           </div>
 
             <!-- Month of the year -->
